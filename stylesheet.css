@@ -1,0 +1,69 @@
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.constrained-width-container {
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.matrix {
+  max-height: 550px;
+}
+
+.axis-row,
+.matrix-row {
+  display: flex;
+}
+
+.axis-corner,
+.axis-cell,
+.matrix-cell {
+  min-height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: 0%;
+}
+
+.axis-corner {
+  background: hsl(341 100% 75%);
+}
+
+.axis-cell {
+  background: hsl(341, 100%, 90%);
+}
+
+.axis-row .axis-cell:nth-child(odd),
+.matrix-row:nth-child(even) .axis-cell {
+  background: hsl(341, 100%, 85%);
+}
+
+.matrix-row:nth-child(even) .matrix-cell,
+.matrix-row .matrix-cell:nth-child(odd) {
+  background: hsl(0, 0%, 95%);
+}
+
+.matrix-row:nth-child(even) .matrix-cell:nth-child(odd) {
+  background: hsl(0, 0%, 90%);
+}
+
+.keyboard {
+  display: flex;
+}
+
+.keyboard-key {
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: 0%;
+}
