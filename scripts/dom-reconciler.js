@@ -1,3 +1,10 @@
+import {
+  generateMatrix,
+  generateAxisLabelsX,
+  generateAxisLabelsY,
+  getNoteName,
+} from "./note-utilities.js";
+
 const HIDDEN_CLASS = "hidden";
 
 export class DomReconciler {
@@ -26,12 +33,13 @@ export class DomReconciler {
   }
 
   reconcile = (state) => {
-    this.toggleMatrixVisibility(state.toneRow);
-    this.updateToneRow(state.toneRow);
-    this.updateKeyboard(state.toneRow);
+    this._toggleMatrixVisibility(state);
+    this._updateToneRow(state);
+    this._updateKeyboard(state);
+    this._updateMatrix(state);
   };
 
-  toggleMatrixVisibility = (toneRow) => {
+  _toggleMatrixVisibility = ({ toneRow }) => {
     if (toneRow.length > 0) {
       this.domNodes.emptyMatrixPlaceholder.classList.add(HIDDEN_CLASS);
       this.domNodes.matrixContainer.classList.remove(HIDDEN_CLASS);
@@ -41,13 +49,14 @@ export class DomReconciler {
     }
   };
 
-  updateToneRow = (toneRow) => {
+  _updateToneRow = ({ toneRow, noteDisplayType }) => {
     this.domNodes.toneRowCells.forEach((cell, index) => {
-      cell.innerText = index in toneRow ? toneRow[index] : "";
+      cell.innerText =
+        index in toneRow ? getNoteName(toneRow[index], noteDisplayType) : "";
     });
   };
 
-  updateKeyboard = (toneRow) => {
+  _updateKeyboard = ({ toneRow, noteDisplayType }) => {
     const disabledClassName = "keyboard-key--disabled";
     this.domNodes.keyboardKeys.forEach((key, index) => {
       if (toneRow.includes(index)) {
@@ -55,6 +64,31 @@ export class DomReconciler {
       } else {
         key.classList.remove(disabledClassName);
       }
+      key.innerText = getNoteName(index, noteDisplayType);
+    });
+  };
+
+  _updateMatrix = ({ toneRow, noteDisplayType }) => {
+    // TODO:
+    // If this function gets the previous state, it can do some smart
+    // optimizations around which DOM nodes tlo change.
+    const { axisCellsP, axisCellsI, axisCellsR, axisCellsRI } = this.domNodes;
+    const xAxis = generateAxisLabelsX(toneRow);
+    const yAxis = generateAxisLabelsY(toneRow);
+    const matrix = generateMatrix(toneRow);
+
+    this.domNodes.matrixRowsCells.forEach((row, rowIndex) => {
+      row.forEach((cell, columnIndex) => {
+        cell.innerText = getNoteName(
+          matrix[rowIndex][columnIndex],
+          noteDisplayType
+        );
+      });
+
+      axisCellsP[rowIndex].innerHTML = yAxis[rowIndex];
+      axisCellsR[rowIndex].innerHTML = yAxis[rowIndex];
+      axisCellsI[rowIndex].innerHTML = xAxis[rowIndex];
+      axisCellsRI[rowIndex].innerHTML = xAxis[rowIndex];
     });
   };
 }

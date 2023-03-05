@@ -51,13 +51,13 @@
   margin-left: -1px;
 }
 
-.keyboard-key--white.keyboard-key--disabled {
-  background: #ddd;
-}
-
 .keyboard-key--white:focus,
 .keyboard-key--white:active {
   z-index: 15;
+}
+
+.keyboard-key--white.keyboard-key--disabled {
+  background: #ddd;
 }
 
 .keyboard-key--white:active {
