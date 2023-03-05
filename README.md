@@ -1,6 +1,6 @@
 # Matrix Maker
 
-This is a 12-tone matrix generator written in vanilla JavaScript and plain CSS.
+This project is a 12-tone matrix generator written in vanilla JavaScript and plain CSS. I built this as a [React Native app](https://play.google.com/store/apps/details?id=com.deadhandmedia.matrixmaker&hl=en_US&gl=US) around 2 years before creating this repo, and I was able to reuse a lot of code from that project.
 
 ## Generating the grid with Emmet
 
