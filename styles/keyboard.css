@@ -1,3 +1,10 @@
+.keyboard-wrapper {
+  flex-basis: 35%;
+  flex-shrink: 1;
+  flex-grow: 2;
+  display: flex;
+}
+
 .keyboard {
   display: flex;
   position: relative;
@@ -26,6 +33,7 @@
   flex-direction: row;
   justify-content: center;
   align-items: flex-end;
+  padding: 10px 0;
 }
 
 .keyboard-key--white {
@@ -35,7 +43,6 @@
   border-width: 1px;
   border-color: #ccc;
   border-style: solid;
-  border-bottom-width: 0px;
   margin-left: -1px;
 }
 
@@ -61,7 +68,6 @@
   z-index: 20;
   background: #404040;
   color: #fff;
-  padding: 10px 0;
   border-width: 1px;
   border-style: solid;
   border-color: #ccc;

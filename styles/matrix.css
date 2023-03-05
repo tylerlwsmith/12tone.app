@@ -14,13 +14,15 @@
 }
 
 .axis {
-  display: flex;
+  display: grid;
 }
 
 .axis--x {
-  flex-grow: 1;
-  flex-shrink: 0;
-  flex-basis: 0%;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.axis--y {
+  grid-template-rows: repeat(12, 1fr);
 }
 
 .axis-cell,
@@ -29,14 +31,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-grow: 1;
-  flex-shrink: 0;
-  flex-basis: 0%;
-}
-
-.axis--y {
-  display: flex;
-  flex-direction: column;
 }
 
 .axis-corner {
@@ -52,18 +46,13 @@
 }
 
 .matrix {
-  display: flex;
-  flex-wrap: wrap;
-  flex-grow: 1;
-  flex-shrink: 0;
-  flex-basis: 0%;
+  display: grid;
+  grid-template-rows: repeat(12, 1fr);
 }
 
 .matrix-row {
-  display: flex;
-  flex-basis: 100%;
-  flex-shrink: 0;
-  flex-grow: 0;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
 }
 
 .matrix-row:nth-child(even) .matrix-cell,
