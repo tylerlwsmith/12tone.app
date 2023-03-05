@@ -1,11 +1,35 @@
+.empty-matrix {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+  height: 100%;
+}
+
+.empty-matrix__heading-top {
+  font-size: 16px;
+  max-width: 260px;
+  line-height: 26px;
+  margin-bottom: 20px;
+}
+
+.empty-matrix__heading-bottom {
+  font-size: 12px;
+  line-height: 26px;
+}
+
 .matrix-wrapper {
   display: grid;
   grid-template-rows: 1fr 12fr 1fr;
-  max-height: 550px;
-  margin-top: auto;
-  flex-grow: 1;
-  flex-basis: 50%;
-  flex-shrink: 2;
+  height: 100%;
+}
+
+.matrix-wrapper--empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .matrix-wrapper__row {

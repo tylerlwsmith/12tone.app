@@ -13,249 +13,262 @@
     <link href="/styles/utility.css" rel="stylesheet" />
   </head>
   <body>
+    <h1 class="sr-only">Matrix Maker</h1>
     <div class="application-wrapper">
-      <section class="matrix-wrapper" id="matrix-wrapper">
-        <h2 class="sr-only">Matrix</h2>
+      <div class="top-of-screen-wrapper">
+        <div class="empty-matrix">
+          <p class="empty-matrix__heading-top">
+            Tap the keys below to begin generating your matrix.
+          </p>
 
-        <div class="matrix-wrapper__row matrix-wrapper__row--top">
-          <div class="axis-corner"></div>
-          <div class="axis axis--x" axis="top">
-            <div class="axis-cell" data-axis-cell="0"></div>
-            <div class="axis-cell" data-axis-cell="1"></div>
-            <div class="axis-cell" data-axis-cell="2"></div>
-            <div class="axis-cell" data-axis-cell="3"></div>
-            <div class="axis-cell" data-axis-cell="4"></div>
-            <div class="axis-cell" data-axis-cell="5"></div>
-            <div class="axis-cell" data-axis-cell="6"></div>
-            <div class="axis-cell" data-axis-cell="7"></div>
-            <div class="axis-cell" data-axis-cell="8"></div>
-            <div class="axis-cell" data-axis-cell="9"></div>
-            <div class="axis-cell" data-axis-cell="10"></div>
-            <div class="axis-cell" data-axis-cell="11"></div>
-          </div>
-          <div class="axis-corner"></div>
+          <p class="empty-matrix__heading-bottom">
+            Tapping a selected key will remove it from the tone row.
+          </p>
         </div>
 
-        <div class="matrix-wrapper__row matrix-wrapper__row--middle">
-          <div class="axis axis--y" axis="left">
-            <div class="axis-cell" data-axis-cell="0"></div>
-            <div class="axis-cell" data-axis-cell="1"></div>
-            <div class="axis-cell" data-axis-cell="2"></div>
-            <div class="axis-cell" data-axis-cell="3"></div>
-            <div class="axis-cell" data-axis-cell="4"></div>
-            <div class="axis-cell" data-axis-cell="5"></div>
-            <div class="axis-cell" data-axis-cell="6"></div>
-            <div class="axis-cell" data-axis-cell="7"></div>
-            <div class="axis-cell" data-axis-cell="8"></div>
-            <div class="axis-cell" data-axis-cell="9"></div>
-            <div class="axis-cell" data-axis-cell="10"></div>
-            <div class="axis-cell" data-axis-cell="11"></div>
-          </div>
-          <div class="matrix" id="matrix">
-            <div class="matrix-row" data-matrix-row="0">
-              <div class="matrix-cell" data-matrix-cell-column="0"></div>
-              <div class="matrix-cell" data-matrix-cell-column="1"></div>
-              <div class="matrix-cell" data-matrix-cell-column="2"></div>
-              <div class="matrix-cell" data-matrix-cell-column="3"></div>
-              <div class="matrix-cell" data-matrix-cell-column="4"></div>
-              <div class="matrix-cell" data-matrix-cell-column="5"></div>
-              <div class="matrix-cell" data-matrix-cell-column="6"></div>
-              <div class="matrix-cell" data-matrix-cell-column="7"></div>
-              <div class="matrix-cell" data-matrix-cell-column="8"></div>
-              <div class="matrix-cell" data-matrix-cell-column="9"></div>
-              <div class="matrix-cell" data-matrix-cell-column="10"></div>
-              <div class="matrix-cell" data-matrix-cell-column="11"></div>
-            </div>
-            <div class="matrix-row" data-matrix-row="1">
-              <div class="matrix-cell" data-matrix-cell-column="0"></div>
-              <div class="matrix-cell" data-matrix-cell-column="1"></div>
-              <div class="matrix-cell" data-matrix-cell-column="2"></div>
-              <div class="matrix-cell" data-matrix-cell-column="3"></div>
-              <div class="matrix-cell" data-matrix-cell-column="4"></div>
-              <div class="matrix-cell" data-matrix-cell-column="5"></div>
-              <div class="matrix-cell" data-matrix-cell-column="6"></div>
-              <div class="matrix-cell" data-matrix-cell-column="7"></div>
-              <div class="matrix-cell" data-matrix-cell-column="8"></div>
-              <div class="matrix-cell" data-matrix-cell-column="9"></div>
-              <div class="matrix-cell" data-matrix-cell-column="10"></div>
-              <div class="matrix-cell" data-matrix-cell-column="11"></div>
-            </div>
-            <div class="matrix-row" data-matrix-row="2">
-              <div class="matrix-cell" data-matrix-cell-column="0"></div>
-              <div class="matrix-cell" data-matrix-cell-column="1"></div>
-              <div class="matrix-cell" data-matrix-cell-column="2"></div>
-              <div class="matrix-cell" data-matrix-cell-column="3"></div>
-              <div class="matrix-cell" data-matrix-cell-column="4"></div>
-              <div class="matrix-cell" data-matrix-cell-column="5"></div>
-              <div class="matrix-cell" data-matrix-cell-column="6"></div>
-              <div class="matrix-cell" data-matrix-cell-column="7"></div>
-              <div class="matrix-cell" data-matrix-cell-column="8"></div>
-              <div class="matrix-cell" data-matrix-cell-column="9"></div>
-              <div class="matrix-cell" data-matrix-cell-column="10"></div>
-              <div class="matrix-cell" data-matrix-cell-column="11"></div>
-            </div>
-            <div class="matrix-row" data-matrix-row="3">
-              <div class="matrix-cell" data-matrix-cell-column="0"></div>
-              <div class="matrix-cell" data-matrix-cell-column="1"></div>
-              <div class="matrix-cell" data-matrix-cell-column="2"></div>
-              <div class="matrix-cell" data-matrix-cell-column="3"></div>
-              <div class="matrix-cell" data-matrix-cell-column="4"></div>
-              <div class="matrix-cell" data-matrix-cell-column="5"></div>
-              <div class="matrix-cell" data-matrix-cell-column="6"></div>
-              <div class="matrix-cell" data-matrix-cell-column="7"></div>
-              <div class="matrix-cell" data-matrix-cell-column="8"></div>
-              <div class="matrix-cell" data-matrix-cell-column="9"></div>
-              <div class="matrix-cell" data-matrix-cell-column="10"></div>
-              <div class="matrix-cell" data-matrix-cell-column="11"></div>
-            </div>
-            <div class="matrix-row" data-matrix-row="4">
-              <div class="matrix-cell" data-matrix-cell-column="0"></div>
-              <div class="matrix-cell" data-matrix-cell-column="1"></div>
-              <div class="matrix-cell" data-matrix-cell-column="2"></div>
-              <div class="matrix-cell" data-matrix-cell-column="3"></div>
-              <div class="matrix-cell" data-matrix-cell-column="4"></div>
-              <div class="matrix-cell" data-matrix-cell-column="5"></div>
-              <div class="matrix-cell" data-matrix-cell-column="6"></div>
-              <div class="matrix-cell" data-matrix-cell-column="7"></div>
-              <div class="matrix-cell" data-matrix-cell-column="8"></div>
-              <div class="matrix-cell" data-matrix-cell-column="9"></div>
-              <div class="matrix-cell" data-matrix-cell-column="10"></div>
-              <div class="matrix-cell" data-matrix-cell-column="11"></div>
-            </div>
-            <div class="matrix-row" data-matrix-row="5">
-              <div class="matrix-cell" data-matrix-cell-column="0"></div>
-              <div class="matrix-cell" data-matrix-cell-column="1"></div>
-              <div class="matrix-cell" data-matrix-cell-column="2"></div>
-              <div class="matrix-cell" data-matrix-cell-column="3"></div>
-              <div class="matrix-cell" data-matrix-cell-column="4"></div>
-              <div class="matrix-cell" data-matrix-cell-column="5"></div>
-              <div class="matrix-cell" data-matrix-cell-column="6"></div>
-              <div class="matrix-cell" data-matrix-cell-column="7"></div>
-              <div class="matrix-cell" data-matrix-cell-column="8"></div>
-              <div class="matrix-cell" data-matrix-cell-column="9"></div>
-              <div class="matrix-cell" data-matrix-cell-column="10"></div>
-              <div class="matrix-cell" data-matrix-cell-column="11"></div>
-            </div>
-            <div class="matrix-row" data-matrix-row="6">
-              <div class="matrix-cell" data-matrix-cell-column="0"></div>
-              <div class="matrix-cell" data-matrix-cell-column="1"></div>
-              <div class="matrix-cell" data-matrix-cell-column="2"></div>
-              <div class="matrix-cell" data-matrix-cell-column="3"></div>
-              <div class="matrix-cell" data-matrix-cell-column="4"></div>
-              <div class="matrix-cell" data-matrix-cell-column="5"></div>
-              <div class="matrix-cell" data-matrix-cell-column="6"></div>
-              <div class="matrix-cell" data-matrix-cell-column="7"></div>
-              <div class="matrix-cell" data-matrix-cell-column="8"></div>
-              <div class="matrix-cell" data-matrix-cell-column="9"></div>
-              <div class="matrix-cell" data-matrix-cell-column="10"></div>
-              <div class="matrix-cell" data-matrix-cell-column="11"></div>
-            </div>
-            <div class="matrix-row" data-matrix-row="7">
-              <div class="matrix-cell" data-matrix-cell-column="0"></div>
-              <div class="matrix-cell" data-matrix-cell-column="1"></div>
-              <div class="matrix-cell" data-matrix-cell-column="2"></div>
-              <div class="matrix-cell" data-matrix-cell-column="3"></div>
-              <div class="matrix-cell" data-matrix-cell-column="4"></div>
-              <div class="matrix-cell" data-matrix-cell-column="5"></div>
-              <div class="matrix-cell" data-matrix-cell-column="6"></div>
-              <div class="matrix-cell" data-matrix-cell-column="7"></div>
-              <div class="matrix-cell" data-matrix-cell-column="8"></div>
-              <div class="matrix-cell" data-matrix-cell-column="9"></div>
-              <div class="matrix-cell" data-matrix-cell-column="10"></div>
-              <div class="matrix-cell" data-matrix-cell-column="11"></div>
-            </div>
-            <div class="matrix-row" data-matrix-row="8">
-              <div class="matrix-cell" data-matrix-cell-column="0"></div>
-              <div class="matrix-cell" data-matrix-cell-column="1"></div>
-              <div class="matrix-cell" data-matrix-cell-column="2"></div>
-              <div class="matrix-cell" data-matrix-cell-column="3"></div>
-              <div class="matrix-cell" data-matrix-cell-column="4"></div>
-              <div class="matrix-cell" data-matrix-cell-column="5"></div>
-              <div class="matrix-cell" data-matrix-cell-column="6"></div>
-              <div class="matrix-cell" data-matrix-cell-column="7"></div>
-              <div class="matrix-cell" data-matrix-cell-column="8"></div>
-              <div class="matrix-cell" data-matrix-cell-column="9"></div>
-              <div class="matrix-cell" data-matrix-cell-column="10"></div>
-              <div class="matrix-cell" data-matrix-cell-column="11"></div>
-            </div>
-            <div class="matrix-row" data-matrix-row="9">
-              <div class="matrix-cell" data-matrix-cell-column="0"></div>
-              <div class="matrix-cell" data-matrix-cell-column="1"></div>
-              <div class="matrix-cell" data-matrix-cell-column="2"></div>
-              <div class="matrix-cell" data-matrix-cell-column="3"></div>
-              <div class="matrix-cell" data-matrix-cell-column="4"></div>
-              <div class="matrix-cell" data-matrix-cell-column="5"></div>
-              <div class="matrix-cell" data-matrix-cell-column="6"></div>
-              <div class="matrix-cell" data-matrix-cell-column="7"></div>
-              <div class="matrix-cell" data-matrix-cell-column="8"></div>
-              <div class="matrix-cell" data-matrix-cell-column="9"></div>
-              <div class="matrix-cell" data-matrix-cell-column="10"></div>
-              <div class="matrix-cell" data-matrix-cell-column="11"></div>
-            </div>
-            <div class="matrix-row" data-matrix-row="10">
-              <div class="matrix-cell" data-matrix-cell-column="0"></div>
-              <div class="matrix-cell" data-matrix-cell-column="1"></div>
-              <div class="matrix-cell" data-matrix-cell-column="2"></div>
-              <div class="matrix-cell" data-matrix-cell-column="3"></div>
-              <div class="matrix-cell" data-matrix-cell-column="4"></div>
-              <div class="matrix-cell" data-matrix-cell-column="5"></div>
-              <div class="matrix-cell" data-matrix-cell-column="6"></div>
-              <div class="matrix-cell" data-matrix-cell-column="7"></div>
-              <div class="matrix-cell" data-matrix-cell-column="8"></div>
-              <div class="matrix-cell" data-matrix-cell-column="9"></div>
-              <div class="matrix-cell" data-matrix-cell-column="10"></div>
-              <div class="matrix-cell" data-matrix-cell-column="11"></div>
-            </div>
-            <div class="matrix-row" data-matrix-row="11">
-              <div class="matrix-cell" data-matrix-cell-column="0"></div>
-              <div class="matrix-cell" data-matrix-cell-column="1"></div>
-              <div class="matrix-cell" data-matrix-cell-column="2"></div>
-              <div class="matrix-cell" data-matrix-cell-column="3"></div>
-              <div class="matrix-cell" data-matrix-cell-column="4"></div>
-              <div class="matrix-cell" data-matrix-cell-column="5"></div>
-              <div class="matrix-cell" data-matrix-cell-column="6"></div>
-              <div class="matrix-cell" data-matrix-cell-column="7"></div>
-              <div class="matrix-cell" data-matrix-cell-column="8"></div>
-              <div class="matrix-cell" data-matrix-cell-column="9"></div>
-              <div class="matrix-cell" data-matrix-cell-column="10"></div>
-              <div class="matrix-cell" data-matrix-cell-column="11"></div>
-            </div>
-          </div>
-          <div class="axis axis--y" axis="right">
-            <div class="axis-cell" data-axis-cell="0"></div>
-            <div class="axis-cell" data-axis-cell="1"></div>
-            <div class="axis-cell" data-axis-cell="2"></div>
-            <div class="axis-cell" data-axis-cell="3"></div>
-            <div class="axis-cell" data-axis-cell="4"></div>
-            <div class="axis-cell" data-axis-cell="5"></div>
-            <div class="axis-cell" data-axis-cell="6"></div>
-            <div class="axis-cell" data-axis-cell="7"></div>
-            <div class="axis-cell" data-axis-cell="8"></div>
-            <div class="axis-cell" data-axis-cell="9"></div>
-            <div class="axis-cell" data-axis-cell="10"></div>
-            <div class="axis-cell" data-axis-cell="11"></div>
-          </div>
-        </div>
+        <section class="matrix-wrapper hidden" id="matrix-wrapper">
+          <h2 class="sr-only">Matrix</h2>
 
-        <div class="matrix-wrapper__row matrix-wrapper__row--bottom">
-          <div class="axis-corner"></div>
-          <div class="axis axis--x" axis="bottom">
-            <div class="axis-cell" data-axis-cell="0"></div>
-            <div class="axis-cell" data-axis-cell="1"></div>
-            <div class="axis-cell" data-axis-cell="2"></div>
-            <div class="axis-cell" data-axis-cell="3"></div>
-            <div class="axis-cell" data-axis-cell="4"></div>
-            <div class="axis-cell" data-axis-cell="5"></div>
-            <div class="axis-cell" data-axis-cell="6"></div>
-            <div class="axis-cell" data-axis-cell="7"></div>
-            <div class="axis-cell" data-axis-cell="8"></div>
-            <div class="axis-cell" data-axis-cell="9"></div>
-            <div class="axis-cell" data-axis-cell="10"></div>
-            <div class="axis-cell" data-axis-cell="11"></div>
+          <div class="matrix-wrapper__row matrix-wrapper__row--top">
+            <div class="axis-corner"></div>
+            <div class="axis axis--x" axis="top">
+              <div class="axis-cell" data-axis-cell="0"></div>
+              <div class="axis-cell" data-axis-cell="1"></div>
+              <div class="axis-cell" data-axis-cell="2"></div>
+              <div class="axis-cell" data-axis-cell="3"></div>
+              <div class="axis-cell" data-axis-cell="4"></div>
+              <div class="axis-cell" data-axis-cell="5"></div>
+              <div class="axis-cell" data-axis-cell="6"></div>
+              <div class="axis-cell" data-axis-cell="7"></div>
+              <div class="axis-cell" data-axis-cell="8"></div>
+              <div class="axis-cell" data-axis-cell="9"></div>
+              <div class="axis-cell" data-axis-cell="10"></div>
+              <div class="axis-cell" data-axis-cell="11"></div>
+            </div>
+            <div class="axis-corner"></div>
           </div>
-          <div class="axis-corner"></div>
-        </div>
-      </section>
+
+          <div class="matrix-wrapper__row matrix-wrapper__row--middle">
+            <div class="axis axis--y" axis="left">
+              <div class="axis-cell" data-axis-cell="0"></div>
+              <div class="axis-cell" data-axis-cell="1"></div>
+              <div class="axis-cell" data-axis-cell="2"></div>
+              <div class="axis-cell" data-axis-cell="3"></div>
+              <div class="axis-cell" data-axis-cell="4"></div>
+              <div class="axis-cell" data-axis-cell="5"></div>
+              <div class="axis-cell" data-axis-cell="6"></div>
+              <div class="axis-cell" data-axis-cell="7"></div>
+              <div class="axis-cell" data-axis-cell="8"></div>
+              <div class="axis-cell" data-axis-cell="9"></div>
+              <div class="axis-cell" data-axis-cell="10"></div>
+              <div class="axis-cell" data-axis-cell="11"></div>
+            </div>
+            <div class="matrix" id="matrix">
+              <div class="matrix-row" data-matrix-row="0">
+                <div class="matrix-cell" data-matrix-cell-column="0"></div>
+                <div class="matrix-cell" data-matrix-cell-column="1"></div>
+                <div class="matrix-cell" data-matrix-cell-column="2"></div>
+                <div class="matrix-cell" data-matrix-cell-column="3"></div>
+                <div class="matrix-cell" data-matrix-cell-column="4"></div>
+                <div class="matrix-cell" data-matrix-cell-column="5"></div>
+                <div class="matrix-cell" data-matrix-cell-column="6"></div>
+                <div class="matrix-cell" data-matrix-cell-column="7"></div>
+                <div class="matrix-cell" data-matrix-cell-column="8"></div>
+                <div class="matrix-cell" data-matrix-cell-column="9"></div>
+                <div class="matrix-cell" data-matrix-cell-column="10"></div>
+                <div class="matrix-cell" data-matrix-cell-column="11"></div>
+              </div>
+              <div class="matrix-row" data-matrix-row="1">
+                <div class="matrix-cell" data-matrix-cell-column="0"></div>
+                <div class="matrix-cell" data-matrix-cell-column="1"></div>
+                <div class="matrix-cell" data-matrix-cell-column="2"></div>
+                <div class="matrix-cell" data-matrix-cell-column="3"></div>
+                <div class="matrix-cell" data-matrix-cell-column="4"></div>
+                <div class="matrix-cell" data-matrix-cell-column="5"></div>
+                <div class="matrix-cell" data-matrix-cell-column="6"></div>
+                <div class="matrix-cell" data-matrix-cell-column="7"></div>
+                <div class="matrix-cell" data-matrix-cell-column="8"></div>
+                <div class="matrix-cell" data-matrix-cell-column="9"></div>
+                <div class="matrix-cell" data-matrix-cell-column="10"></div>
+                <div class="matrix-cell" data-matrix-cell-column="11"></div>
+              </div>
+              <div class="matrix-row" data-matrix-row="2">
+                <div class="matrix-cell" data-matrix-cell-column="0"></div>
+                <div class="matrix-cell" data-matrix-cell-column="1"></div>
+                <div class="matrix-cell" data-matrix-cell-column="2"></div>
+                <div class="matrix-cell" data-matrix-cell-column="3"></div>
+                <div class="matrix-cell" data-matrix-cell-column="4"></div>
+                <div class="matrix-cell" data-matrix-cell-column="5"></div>
+                <div class="matrix-cell" data-matrix-cell-column="6"></div>
+                <div class="matrix-cell" data-matrix-cell-column="7"></div>
+                <div class="matrix-cell" data-matrix-cell-column="8"></div>
+                <div class="matrix-cell" data-matrix-cell-column="9"></div>
+                <div class="matrix-cell" data-matrix-cell-column="10"></div>
+                <div class="matrix-cell" data-matrix-cell-column="11"></div>
+              </div>
+              <div class="matrix-row" data-matrix-row="3">
+                <div class="matrix-cell" data-matrix-cell-column="0"></div>
+                <div class="matrix-cell" data-matrix-cell-column="1"></div>
+                <div class="matrix-cell" data-matrix-cell-column="2"></div>
+                <div class="matrix-cell" data-matrix-cell-column="3"></div>
+                <div class="matrix-cell" data-matrix-cell-column="4"></div>
+                <div class="matrix-cell" data-matrix-cell-column="5"></div>
+                <div class="matrix-cell" data-matrix-cell-column="6"></div>
+                <div class="matrix-cell" data-matrix-cell-column="7"></div>
+                <div class="matrix-cell" data-matrix-cell-column="8"></div>
+                <div class="matrix-cell" data-matrix-cell-column="9"></div>
+                <div class="matrix-cell" data-matrix-cell-column="10"></div>
+                <div class="matrix-cell" data-matrix-cell-column="11"></div>
+              </div>
+              <div class="matrix-row" data-matrix-row="4">
+                <div class="matrix-cell" data-matrix-cell-column="0"></div>
+                <div class="matrix-cell" data-matrix-cell-column="1"></div>
+                <div class="matrix-cell" data-matrix-cell-column="2"></div>
+                <div class="matrix-cell" data-matrix-cell-column="3"></div>
+                <div class="matrix-cell" data-matrix-cell-column="4"></div>
+                <div class="matrix-cell" data-matrix-cell-column="5"></div>
+                <div class="matrix-cell" data-matrix-cell-column="6"></div>
+                <div class="matrix-cell" data-matrix-cell-column="7"></div>
+                <div class="matrix-cell" data-matrix-cell-column="8"></div>
+                <div class="matrix-cell" data-matrix-cell-column="9"></div>
+                <div class="matrix-cell" data-matrix-cell-column="10"></div>
+                <div class="matrix-cell" data-matrix-cell-column="11"></div>
+              </div>
+              <div class="matrix-row" data-matrix-row="5">
+                <div class="matrix-cell" data-matrix-cell-column="0"></div>
+                <div class="matrix-cell" data-matrix-cell-column="1"></div>
+                <div class="matrix-cell" data-matrix-cell-column="2"></div>
+                <div class="matrix-cell" data-matrix-cell-column="3"></div>
+                <div class="matrix-cell" data-matrix-cell-column="4"></div>
+                <div class="matrix-cell" data-matrix-cell-column="5"></div>
+                <div class="matrix-cell" data-matrix-cell-column="6"></div>
+                <div class="matrix-cell" data-matrix-cell-column="7"></div>
+                <div class="matrix-cell" data-matrix-cell-column="8"></div>
+                <div class="matrix-cell" data-matrix-cell-column="9"></div>
+                <div class="matrix-cell" data-matrix-cell-column="10"></div>
+                <div class="matrix-cell" data-matrix-cell-column="11"></div>
+              </div>
+              <div class="matrix-row" data-matrix-row="6">
+                <div class="matrix-cell" data-matrix-cell-column="0"></div>
+                <div class="matrix-cell" data-matrix-cell-column="1"></div>
+                <div class="matrix-cell" data-matrix-cell-column="2"></div>
+                <div class="matrix-cell" data-matrix-cell-column="3"></div>
+                <div class="matrix-cell" data-matrix-cell-column="4"></div>
+                <div class="matrix-cell" data-matrix-cell-column="5"></div>
+                <div class="matrix-cell" data-matrix-cell-column="6"></div>
+                <div class="matrix-cell" data-matrix-cell-column="7"></div>
+                <div class="matrix-cell" data-matrix-cell-column="8"></div>
+                <div class="matrix-cell" data-matrix-cell-column="9"></div>
+                <div class="matrix-cell" data-matrix-cell-column="10"></div>
+                <div class="matrix-cell" data-matrix-cell-column="11"></div>
+              </div>
+              <div class="matrix-row" data-matrix-row="7">
+                <div class="matrix-cell" data-matrix-cell-column="0"></div>
+                <div class="matrix-cell" data-matrix-cell-column="1"></div>
+                <div class="matrix-cell" data-matrix-cell-column="2"></div>
+                <div class="matrix-cell" data-matrix-cell-column="3"></div>
+                <div class="matrix-cell" data-matrix-cell-column="4"></div>
+                <div class="matrix-cell" data-matrix-cell-column="5"></div>
+                <div class="matrix-cell" data-matrix-cell-column="6"></div>
+                <div class="matrix-cell" data-matrix-cell-column="7"></div>
+                <div class="matrix-cell" data-matrix-cell-column="8"></div>
+                <div class="matrix-cell" data-matrix-cell-column="9"></div>
+                <div class="matrix-cell" data-matrix-cell-column="10"></div>
+                <div class="matrix-cell" data-matrix-cell-column="11"></div>
+              </div>
+              <div class="matrix-row" data-matrix-row="8">
+                <div class="matrix-cell" data-matrix-cell-column="0"></div>
+                <div class="matrix-cell" data-matrix-cell-column="1"></div>
+                <div class="matrix-cell" data-matrix-cell-column="2"></div>
+                <div class="matrix-cell" data-matrix-cell-column="3"></div>
+                <div class="matrix-cell" data-matrix-cell-column="4"></div>
+                <div class="matrix-cell" data-matrix-cell-column="5"></div>
+                <div class="matrix-cell" data-matrix-cell-column="6"></div>
+                <div class="matrix-cell" data-matrix-cell-column="7"></div>
+                <div class="matrix-cell" data-matrix-cell-column="8"></div>
+                <div class="matrix-cell" data-matrix-cell-column="9"></div>
+                <div class="matrix-cell" data-matrix-cell-column="10"></div>
+                <div class="matrix-cell" data-matrix-cell-column="11"></div>
+              </div>
+              <div class="matrix-row" data-matrix-row="9">
+                <div class="matrix-cell" data-matrix-cell-column="0"></div>
+                <div class="matrix-cell" data-matrix-cell-column="1"></div>
+                <div class="matrix-cell" data-matrix-cell-column="2"></div>
+                <div class="matrix-cell" data-matrix-cell-column="3"></div>
+                <div class="matrix-cell" data-matrix-cell-column="4"></div>
+                <div class="matrix-cell" data-matrix-cell-column="5"></div>
+                <div class="matrix-cell" data-matrix-cell-column="6"></div>
+                <div class="matrix-cell" data-matrix-cell-column="7"></div>
+                <div class="matrix-cell" data-matrix-cell-column="8"></div>
+                <div class="matrix-cell" data-matrix-cell-column="9"></div>
+                <div class="matrix-cell" data-matrix-cell-column="10"></div>
+                <div class="matrix-cell" data-matrix-cell-column="11"></div>
+              </div>
+              <div class="matrix-row" data-matrix-row="10">
+                <div class="matrix-cell" data-matrix-cell-column="0"></div>
+                <div class="matrix-cell" data-matrix-cell-column="1"></div>
+                <div class="matrix-cell" data-matrix-cell-column="2"></div>
+                <div class="matrix-cell" data-matrix-cell-column="3"></div>
+                <div class="matrix-cell" data-matrix-cell-column="4"></div>
+                <div class="matrix-cell" data-matrix-cell-column="5"></div>
+                <div class="matrix-cell" data-matrix-cell-column="6"></div>
+                <div class="matrix-cell" data-matrix-cell-column="7"></div>
+                <div class="matrix-cell" data-matrix-cell-column="8"></div>
+                <div class="matrix-cell" data-matrix-cell-column="9"></div>
+                <div class="matrix-cell" data-matrix-cell-column="10"></div>
+                <div class="matrix-cell" data-matrix-cell-column="11"></div>
+              </div>
+              <div class="matrix-row" data-matrix-row="11">
+                <div class="matrix-cell" data-matrix-cell-column="0"></div>
+                <div class="matrix-cell" data-matrix-cell-column="1"></div>
+                <div class="matrix-cell" data-matrix-cell-column="2"></div>
+                <div class="matrix-cell" data-matrix-cell-column="3"></div>
+                <div class="matrix-cell" data-matrix-cell-column="4"></div>
+                <div class="matrix-cell" data-matrix-cell-column="5"></div>
+                <div class="matrix-cell" data-matrix-cell-column="6"></div>
+                <div class="matrix-cell" data-matrix-cell-column="7"></div>
+                <div class="matrix-cell" data-matrix-cell-column="8"></div>
+                <div class="matrix-cell" data-matrix-cell-column="9"></div>
+                <div class="matrix-cell" data-matrix-cell-column="10"></div>
+                <div class="matrix-cell" data-matrix-cell-column="11"></div>
+              </div>
+            </div>
+            <div class="axis axis--y" axis="right">
+              <div class="axis-cell" data-axis-cell="0"></div>
+              <div class="axis-cell" data-axis-cell="1"></div>
+              <div class="axis-cell" data-axis-cell="2"></div>
+              <div class="axis-cell" data-axis-cell="3"></div>
+              <div class="axis-cell" data-axis-cell="4"></div>
+              <div class="axis-cell" data-axis-cell="5"></div>
+              <div class="axis-cell" data-axis-cell="6"></div>
+              <div class="axis-cell" data-axis-cell="7"></div>
+              <div class="axis-cell" data-axis-cell="8"></div>
+              <div class="axis-cell" data-axis-cell="9"></div>
+              <div class="axis-cell" data-axis-cell="10"></div>
+              <div class="axis-cell" data-axis-cell="11"></div>
+            </div>
+          </div>
+
+          <div class="matrix-wrapper__row matrix-wrapper__row--bottom">
+            <div class="axis-corner"></div>
+            <div class="axis axis--x" axis="bottom">
+              <div class="axis-cell" data-axis-cell="0"></div>
+              <div class="axis-cell" data-axis-cell="1"></div>
+              <div class="axis-cell" data-axis-cell="2"></div>
+              <div class="axis-cell" data-axis-cell="3"></div>
+              <div class="axis-cell" data-axis-cell="4"></div>
+              <div class="axis-cell" data-axis-cell="5"></div>
+              <div class="axis-cell" data-axis-cell="6"></div>
+              <div class="axis-cell" data-axis-cell="7"></div>
+              <div class="axis-cell" data-axis-cell="8"></div>
+              <div class="axis-cell" data-axis-cell="9"></div>
+              <div class="axis-cell" data-axis-cell="10"></div>
+              <div class="axis-cell" data-axis-cell="11"></div>
+            </div>
+            <div class="axis-corner"></div>
+          </div>
+        </section>
+      </div>
 
       <section class="tone-row">
         <h2 class="sr-only">Tone Row</h2>
