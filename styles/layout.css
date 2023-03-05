@@ -4,7 +4,6 @@ body {
 }
 
 body {
-  height: -webkit-fill-available;
   display: flex;
   align-items: center;
 }
