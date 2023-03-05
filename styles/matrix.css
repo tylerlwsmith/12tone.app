@@ -1,4 +1,4 @@
-.empty-matrix {
+.empty-matrix-placeholder {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -8,31 +8,25 @@
   height: 100%;
 }
 
-.empty-matrix__heading-top {
+.empty-matrix-placeholder__heading-top {
   font-size: 16px;
   max-width: 260px;
   line-height: 26px;
   margin-bottom: 20px;
 }
 
-.empty-matrix__heading-bottom {
+.empty-matrix-placeholder__heading-bottom {
   font-size: 12px;
   line-height: 26px;
 }
 
-.matrix-wrapper {
+.matrix-container {
   display: grid;
   grid-template-rows: 1fr 12fr 1fr;
   height: 100%;
 }
 
-.matrix-wrapper--empty {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.matrix-wrapper__row {
+.matrix-container__row {
   display: grid;
   grid-template-columns: 1fr 12fr 1fr;
 }
@@ -69,7 +63,7 @@
   background: hsl(341, 100%, 85%);
 }
 
-.matrix {
+.matrix-rows {
   display: grid;
   grid-template-rows: repeat(12, 1fr);
 }

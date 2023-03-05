@@ -11,27 +11,29 @@
     <link href="/styles/keyboard.css" rel="stylesheet" />
     <link href="/styles/layout.css" rel="stylesheet" />
     <link href="/styles/utility.css" rel="stylesheet" />
+
+    <script src="/scripts/app.js" type="module"></script>
   </head>
   <body>
     <h1 class="sr-only">Matrix Maker</h1>
     <div class="application-wrapper">
       <div class="top-of-screen-wrapper">
-        <div class="empty-matrix">
-          <p class="empty-matrix__heading-top">
+        <div class="empty-matrix-placeholder" id="empty-matrix-placeholder">
+          <p class="empty-matrix-placeholder__heading-top">
             Tap the keys below to begin generating your matrix.
           </p>
 
-          <p class="empty-matrix__heading-bottom">
+          <p class="empty-matrix-placeholder__heading-bottom">
             Tapping a selected key will remove it from the tone row.
           </p>
         </div>
 
-        <section class="matrix-wrapper hidden" id="matrix-wrapper">
+        <section class="matrix-container hidden" id="matrix-container">
           <h2 class="sr-only">Matrix</h2>
 
-          <div class="matrix-wrapper__row matrix-wrapper__row--top">
+          <div class="matrix-container__row matrix-container__row--top">
             <div class="axis-corner"></div>
-            <div class="axis axis--x" axis="top">
+            <div class="axis axis--x" data-axis="I">
               <div class="axis-cell" data-axis-cell="0"></div>
               <div class="axis-cell" data-axis-cell="1"></div>
               <div class="axis-cell" data-axis-cell="2"></div>
@@ -48,8 +50,8 @@
             <div class="axis-corner"></div>
           </div>
 
-          <div class="matrix-wrapper__row matrix-wrapper__row--middle">
-            <div class="axis axis--y" axis="left">
+          <div class="matrix-container__row matrix-container__row--middle">
+            <div class="axis axis--y" data-axis="P">
               <div class="axis-cell" data-axis-cell="0"></div>
               <div class="axis-cell" data-axis-cell="1"></div>
               <div class="axis-cell" data-axis-cell="2"></div>
@@ -63,7 +65,7 @@
               <div class="axis-cell" data-axis-cell="10"></div>
               <div class="axis-cell" data-axis-cell="11"></div>
             </div>
-            <div class="matrix" id="matrix">
+            <div class="matrix-rows" id="matrix-rows">
               <div class="matrix-row" data-matrix-row="0">
                 <div class="matrix-cell" data-matrix-cell-column="0"></div>
                 <div class="matrix-cell" data-matrix-cell-column="1"></div>
@@ -233,7 +235,7 @@
                 <div class="matrix-cell" data-matrix-cell-column="11"></div>
               </div>
             </div>
-            <div class="axis axis--y" axis="right">
+            <div class="axis axis--y" data-axis="R">
               <div class="axis-cell" data-axis-cell="0"></div>
               <div class="axis-cell" data-axis-cell="1"></div>
               <div class="axis-cell" data-axis-cell="2"></div>
@@ -249,9 +251,9 @@
             </div>
           </div>
 
-          <div class="matrix-wrapper__row matrix-wrapper__row--bottom">
+          <div class="matrix-container__row matrix-container__row--bottom">
             <div class="axis-corner"></div>
-            <div class="axis axis--x" axis="bottom">
+            <div class="axis axis--x" data-axis="RI">
               <div class="axis-cell" data-axis-cell="0"></div>
               <div class="axis-cell" data-axis-cell="1"></div>
               <div class="axis-cell" data-axis-cell="2"></div>
@@ -292,73 +294,109 @@
           <h2 class="sr-only">Keyboard</h2>
 
           <div class="keyboard-key-wrapper keyboard-key-wrapper--white-key">
-            <button data-note="0" class="keyboard-key keyboard-key--white">
+            <button
+              data-keyboard-key="0"
+              class="keyboard-key keyboard-key--white"
+            >
               C
             </button>
           </div>
 
           <div class="keyboard-key-wrapper">
-            <button data-note="1" class="keyboard-key keyboard-key--black">
+            <button
+              data-keyboard-key="1"
+              class="keyboard-key keyboard-key--black"
+            >
               C#
             </button>
           </div>
 
           <div class="keyboard-key-wrapper keyboard-key-wrapper--white-key">
-            <button data-note="2" class="keyboard-key keyboard-key--white">
+            <button
+              data-keyboard-key="2"
+              class="keyboard-key keyboard-key--white"
+            >
               D
             </button>
           </div>
 
           <div class="keyboard-key-wrapper keyboard-key-wrapper--black-key">
-            <button data-note="3" class="keyboard-key keyboard-key--black">
+            <button
+              data-keyboard-key="3"
+              class="keyboard-key keyboard-key--black"
+            >
               D#
             </button>
           </div>
 
           <div class="keyboard-key-wrapper keyboard-key-wrapper--white-key">
-            <button data-note="4" class="keyboard-key keyboard-key--white">
+            <button
+              data-keyboard-key="4"
+              class="keyboard-key keyboard-key--white"
+            >
               E
             </button>
           </div>
 
           <div class="keyboard-key-wrapper keyboard-key-wrapper--white-key">
-            <button data-note="5" class="keyboard-key keyboard-key--white">
+            <button
+              data-keyboard-key="5"
+              class="keyboard-key keyboard-key--white"
+            >
               F
             </button>
           </div>
 
           <div class="keyboard-key-wrapper keyboard-key-wrapper--black-key">
-            <button data-note="6" class="keyboard-key keyboard-key--black">
+            <button
+              data-keyboard-key="6"
+              class="keyboard-key keyboard-key--black"
+            >
               F#
             </button>
           </div>
 
           <div class="keyboard-key-wrapper keyboard-key-wrapper--white-key">
-            <button data-note="7" class="keyboard-key keyboard-key--white">
+            <button
+              data-keyboard-key="7"
+              class="keyboard-key keyboard-key--white"
+            >
               G
             </button>
           </div>
 
           <div class="keyboard-key-wrapper keyboard-key-wrapper--black-key">
-            <button data-note="8" class="keyboard-key keyboard-key--black">
+            <button
+              data-keyboard-key="8"
+              class="keyboard-key keyboard-key--black"
+            >
               G#
             </button>
           </div>
 
           <div class="keyboard-key-wrapper keyboard-key-wrapper--white-key">
-            <button data-note="9" class="keyboard-key keyboard-key--white">
+            <button
+              data-keyboard-key="9"
+              class="keyboard-key keyboard-key--white"
+            >
               A
             </button>
           </div>
 
           <div class="keyboard-key-wrapper keyboard-key-wrapper--black-key">
-            <button data-note="10" class="keyboard-key keyboard-key--black">
+            <button
+              data-keyboard-key="10"
+              class="keyboard-key keyboard-key--black"
+            >
               A#
             </button>
           </div>
 
           <div class="keyboard-key-wrapper keyboard-key-wrapper--white-key">
-            <button data-note="11" class="keyboard-key keyboard-key--white">
+            <button
+              data-keyboard-key="11"
+              class="keyboard-key keyboard-key--white"
+            >
               B
             </button>
           </div>
