@@ -15,6 +15,7 @@ export class DomReconciler {
     keyboardKeys,
     emptyMatrixPlaceholder,
     matrixContainer,
+    noteDisplayTypeSelect,
     axisCellsP,
     axisCellsI,
     axisCellsR,
@@ -26,6 +27,7 @@ export class DomReconciler {
       keyboardKeys,
       emptyMatrixPlaceholder,
       matrixContainer,
+      noteDisplayTypeSelect,
       axisCellsP,
       axisCellsI,
       axisCellsR,
@@ -38,6 +40,7 @@ export class DomReconciler {
     this._updateToneRow(state);
     this._updateKeyboard(state);
     this._updateMatrix(state);
+    this._updateDisplayNoteTypeSelect(state);
   };
 
   _toggleMatrixVisibility = ({ toneRow }) => {
@@ -94,6 +97,10 @@ export class DomReconciler {
         AXIS.RI
       );
     });
+  };
+
+  _updateDisplayNoteTypeSelect = ({ noteDisplayType }) => {
+    this.domNodes.noteDisplayTypeSelect.value = noteDisplayType;
   };
 
   _axisHTML = (number, axisLabel) => {

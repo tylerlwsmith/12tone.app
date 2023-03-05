@@ -22,6 +22,8 @@ export function queryAppDomNodes() {
     keyboardKeys: getDomElements(`[data-keyboard-key]`),
     emptyMatrixPlaceholder: getDomElement("#empty-matrix-placeholder"),
     matrixContainer: getDomElement("#matrix-container"),
+    noteDisplayTypeSelect: getDomElement("#note-display-type-select"),
+    clearToneRowButton: getDomElement("#clear-tone-row-button"),
     axisCellsP: axisElements[MATRIX_AXIS.P],
     axisCellsI: axisElements[MATRIX_AXIS.I],
     axisCellsR: axisElements[MATRIX_AXIS.R],

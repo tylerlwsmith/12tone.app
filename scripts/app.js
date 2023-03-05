@@ -11,6 +11,8 @@ class App {
 
   initialize = () => {
     this._addKeyboardClickHandlers();
+    this._addResetButtonHandler();
+    this._addDisplayNoteTypeSelectHandler();
   };
 
   _getDefaultApplicationState = () => {
@@ -31,6 +33,21 @@ class App {
     });
   };
 
+  _addResetButtonHandler = () => {
+    this._domNodes.clearToneRowButton.addEventListener("click", () => {
+      this._dispatch({ type: ACTION.CLEAR_TONE_ROW });
+    });
+  };
+
+  _addDisplayNoteTypeSelectHandler = () => {
+    this._domNodes.noteDisplayTypeSelect.addEventListener("change", (event) => {
+      this._dispatch({
+        type: ACTION.SET_NOTE_DISPLAY_TYPE,
+        noteDisplayType: event.target.value,
+      });
+    });
+  };
+
   _appStateReducer = (currentState, action) => {
     switch (action.type) {
       case ACTION.PRESS_KEY: {
@@ -43,7 +60,7 @@ class App {
 
         return { ...currentState, toneRow: newToneRow };
       }
-      case ACTION.SET_DISPLAY_NOTE_TYPE: {
+      case ACTION.SET_NOTE_DISPLAY_TYPE: {
         return { ...currentState, noteDisplayType: action.noteDisplayType };
       }
       case ACTION.CLEAR_TONE_ROW: {
@@ -53,7 +70,6 @@ class App {
   };
 
   _dispatch = (action) => {
-    console.log(this._applicationState);
     this._applicationState = this._appStateReducer(
       this._applicationState,
       action

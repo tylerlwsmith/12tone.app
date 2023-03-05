@@ -73,6 +73,10 @@
   grid-template-columns: repeat(12, 1fr);
 }
 
+.matrix-cell {
+  background: #fff;
+}
+
 .matrix-row:nth-child(even) .matrix-cell,
 .matrix-row .matrix-cell:nth-child(even) {
   background: hsl(0, 0%, 95%);
