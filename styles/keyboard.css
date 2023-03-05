@@ -34,7 +34,7 @@
   justify-content: center;
   align-items: flex-end;
   padding: 10px 0;
-  transition: background 1s;
+  transition: background 0.25s;
 }
 
 .keyboard-key:active {
@@ -78,10 +78,10 @@
   border-color: #ccc;
 }
 
-.keyboard-key--black:active {
-  background: #f15386;
-}
-
 .keyboard-key--black.keyboard-key--disabled {
   background: #999;
+}
+
+.keyboard-key--black:active {
+  background: #f15386;
 }

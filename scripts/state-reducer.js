@@ -1,4 +1,6 @@
 import { NOTE_DISPLAY_TYPE, ACTION } from "./constants.js";
+import { DomReconciler } from "./dom-reconciler.js";
+import { domNodes } from "./dom-nodes.js";
 
 const defaultApplicationState = {
   toneRow: [],
@@ -26,7 +28,11 @@ function reduce(currentState, action) {
   }
 }
 
+const reconciler = new DomReconciler(domNodes);
+
 export function dispatch(action) {
   applicationState = reduce(applicationState, action);
   console.log(applicationState);
+
+  reconciler.reconcile(applicationState);
 }

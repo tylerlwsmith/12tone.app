@@ -8,6 +8,7 @@
 .tone {
   border-width: 1px;
   height: 26px;
+  display: flex;
   flex-basis: 26px;
   flex-shrink: 1;
   flex-grow: 0;
@@ -18,14 +19,9 @@
 }
 
 .tone:not(:empty) {
-  background: ffd5e3;
+  background: #ffd5e3;
   border-style: solid;
   border-color: #eca8be;
-  position: absolute;
-  top: -1px;
-  bottom: -1px;
-  left: -1px;
-  right: -1px;
 }
 
 .tone:empty {
