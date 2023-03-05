@@ -45,7 +45,6 @@
 
 .axis-cell,
 .matrix-cell {
-  min-height: 20px;
   display: flex;
   justify-content: center;
   align-items: center;

@@ -17,6 +17,7 @@ body {
 
 .top-of-screen-wrapper {
   max-height: 550px;
+  min-height: 330px;
   flex-grow: 1;
   flex-basis: 50%;
   flex-shrink: 2;
