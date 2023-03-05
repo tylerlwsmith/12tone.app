@@ -1,0 +1,76 @@
+.keyboard {
+  display: flex;
+  position: relative;
+  flex-grow: 1;
+}
+
+.keyboard-key-wrapper {
+  position: relative;
+}
+
+.keyboard-key-wrapper.keyboard-key-wrapper--white-key {
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: 0%;
+}
+
+.keyboard-key-wrapper {
+  display: flex;
+}
+
+.keyboard-key {
+  appearance: none;
+  border: none;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.keyboard-key--white {
+  width: 100%;
+  flex-grow: 1;
+  background: #fff;
+  border-width: 1px;
+  border-color: #ccc;
+  border-style: solid;
+  border-bottom-width: 0px;
+  margin-left: -1px;
+}
+
+.keyboard-key--white.keyboard-key--disabled {
+  background: #ddd;
+}
+
+.keyboard-key--white:focus,
+.keyboard-key--white:active {
+  z-index: 15;
+}
+
+.keyboard-key--white:active {
+  background: #ffd5e3;
+}
+
+.keyboard-key--black {
+  height: 50%;
+  position: absolute;
+  top: 0px;
+  left: -22px;
+  width: 44px;
+  z-index: 20;
+  background: #404040;
+  color: #fff;
+  padding: 10px 0;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #ccc;
+}
+
+.keyboard-key--black:active {
+  background: #f15386;
+}
+
+.keyboard-key--black.keyboard-key--disabled {
+  background: #999;
+}

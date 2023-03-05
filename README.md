@@ -9,9 +9,9 @@ Hand-coding the HTML for the matrix would be tedious. I used Emmet abbreviations
 ```txt
 h2.sr-only{Matrix}
 
-.matrix-wrapper__row>.axis-corner+.axis.axis--x[axis="top"]>.axis-cell[data-axis-cell="$@0"]*12^.axis-corner
+.matrix-wrapper__row.matrix-wrapper__row--top>.axis-corner+.axis.axis--x[axis="top"]>.axis-cell[data-axis-cell="$@0"]*12^.axis-corner
 
-.matrix-wrapper__row>.axis.axis--y[axis="left"]>.axis-cell[data-axis-cell="$@0"]*12^.matrix#matrix>(.matrix-row[data-matrix-row="$@0"]*12>.matrix-cell[data-matrix-cell-column="$@0"]*12)^.axis.axis--y[axis="right"]>.axis-cell[data-axis-cell="$@0"]*12
+.matrix-wrapper__row.matrix-wrapper__row--middle>.axis.axis--y[axis="left"]>.axis-cell[data-axis-cell="$@0"]*12^.matrix#matrix>(.matrix-row[data-matrix-row="$@0"]*12>.matrix-cell[data-matrix-cell-column="$@0"]*12)^.axis.axis--y[axis="right"]>.axis-cell[data-axis-cell="$@0"]*12
 
-.matrix-wrapper__row>.axis-corner+.axis.axis--x[axis="bottom"]>.axis-cell[data-axis-cell="$@0"]*12^.axis-corner
+.matrix-wrapper__row.matrix-wrapper__row--bottom>.axis-corner+.axis.axis--x[axis="bottom"]>.axis-cell[data-axis-cell="$@0"]*12^.axis-corner
 ```

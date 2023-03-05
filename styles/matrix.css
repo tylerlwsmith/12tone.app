@@ -1,36 +1,23 @@
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  border: 0;
-}
-
-.constrained-width-container {
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .matrix-wrapper {
+  display: grid;
+  grid-template-rows: 1fr 12fr 1fr;
   max-height: 550px;
-  display: flex;
-  flex-wrap: wrap;
+  margin-top: auto;
+  flex-grow: 1;
+  flex-basis: 50%;
+  flex-shrink: 2;
 }
 
 .matrix-wrapper__row {
+  display: grid;
+  grid-template-columns: 1fr 12fr 1fr;
+}
+
+.axis {
   display: flex;
-  flex-basis: 100%;
-  flex-shrink: 0;
-  flex-grow: 0;
-  width: 100%;
 }
 
 .axis--x {
-  display: flex;
   flex-grow: 1;
   flex-shrink: 0;
   flex-basis: 0%;
@@ -45,13 +32,6 @@
   flex-grow: 1;
   flex-shrink: 0;
   flex-basis: 0%;
-}
-
-.axis-corner,
-.axis--y {
-  flex-shrink: 0;
-  flex-grow: 0;
-  flex-basis: calc(100% / 14);
 }
 
 .axis--y {
@@ -93,14 +73,4 @@
 
 .matrix-row:nth-child(even) .matrix-cell:nth-child(even) {
   background: hsl(0, 0%, 90%);
-}
-
-.keyboard {
-  display: flex;
-}
-
-.keyboard-key {
-  flex-grow: 1;
-  flex-shrink: 0;
-  flex-basis: 0%;
 }
