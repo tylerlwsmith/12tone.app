@@ -75,7 +75,7 @@ export class DomReconciler {
   _updateMatrix = ({ toneRow, noteDisplayType }) => {
     // TODO:
     // If this function gets the previous state, it can do some smart
-    // optimizations around which DOM nodes tlo change.
+    // optimizations around which DOM nodes to change.
     const { axisCellsP, axisCellsI, axisCellsR, axisCellsRI } = this.domNodes;
     const xAxis = generateAxisLabelsX(toneRow);
     const yAxis = generateAxisLabelsY(toneRow);
