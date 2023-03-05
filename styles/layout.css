@@ -1,5 +1,10 @@
 body {
   min-height: 100vh;
+  min-height: -webkit-fill-available;
+}
+
+body {
+  height: -webkit-fill-available;
   display: flex;
   align-items: center;
 }
