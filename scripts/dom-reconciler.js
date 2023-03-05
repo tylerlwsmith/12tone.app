@@ -4,6 +4,7 @@ import {
   generateAxisLabelsY,
   getNoteName,
 } from "./note-utilities.js";
+import { MATRIX_AXIS as AXIS } from "./constants.js";
 
 const HIDDEN_CLASS = "hidden";
 
@@ -85,10 +86,23 @@ export class DomReconciler {
         );
       });
 
-      axisCellsP[rowIndex].innerHTML = yAxis[rowIndex];
-      axisCellsR[rowIndex].innerHTML = yAxis[rowIndex];
-      axisCellsI[rowIndex].innerHTML = xAxis[rowIndex];
-      axisCellsRI[rowIndex].innerHTML = xAxis[rowIndex];
+      axisCellsP[rowIndex].innerHTML = this._axisHTML(yAxis[rowIndex], AXIS.P);
+      axisCellsR[rowIndex].innerHTML = this._axisHTML(yAxis[rowIndex], AXIS.R);
+      axisCellsI[rowIndex].innerHTML = this._axisHTML(xAxis[rowIndex], AXIS.I);
+      axisCellsRI[rowIndex].innerHTML = this._axisHTML(
+        xAxis[rowIndex],
+        AXIS.RI
+      );
     });
+  };
+
+  _axisHTML = (number, axisLabel) => {
+    return number !== null
+      ? `
+        <div>
+          <strong>${axisLabel}</strong><sub>${number}</sub>
+        </div>
+        `
+      : "";
   };
 }
